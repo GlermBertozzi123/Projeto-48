@@ -33,7 +33,6 @@ function setup() {
 player = createSprite(displayWidth-1400, displayHeight-300, 50, 50);
  player.addAnimation("shooter",shooterImg)
    player.scale = 0.3
-   player.debug = true
    player.setCollider("rectangle",0,0,300,300)
 
   zombies = new Group()
@@ -164,6 +163,7 @@ if (zombies.isTouching(player)) {
       if (zombies[i].isTouching(player)) {
           zombies[i].destroy()
           life -= 1
+          dyingSound.play()
         }
       }
     }
