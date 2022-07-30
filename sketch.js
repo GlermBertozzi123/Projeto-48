@@ -34,6 +34,7 @@ player = createSprite(displayWidth-1400, displayHeight-300, 50, 50);
  player.addAnimation("shooter",shooterImg)
    player.scale = 0.3
    player.setCollider("rectangle",0,0,300,300)
+   player.debug = false
 
   zombies = new Group()
   bulletGroup = new Group()
